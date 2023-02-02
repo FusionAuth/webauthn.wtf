@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://webauthn.wtf</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/architecture-guide</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/basics-of-time-travel</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/cacheadvance-flush</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/cacheadvance-predict</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/cacheadvance-regret</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/cacheadvance-revert</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/compile-time-caching</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/design-principles</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/how-to-contribute</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/installation</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/introduction-to-string-theory</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/neuralink-integration</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/predicting-user-behavior</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/predictive-data-generation</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/temporal-paradoxes</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/testing</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/the-butterfly-effect</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/understanding-caching</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webauthn.wtf/docs/writing-plugins</loc><lastmod>2023-02-01T20:28:50.382Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

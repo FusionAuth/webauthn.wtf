@@ -1,0 +1,1 @@
+This is a partial called test.md
