@@ -6,4 +6,4 @@ Allow: /
 Host: https://webauthn.wtf
 
 # Sitemaps
-Sitemap: https://webauthn.wtf/sitemap.xml
+Sitemap: https://webauthn.wtf/sitemap-index.xml

@@ -1,0 +1,77 @@
+---
+import "../css/style.css"
+import Head from "../components/Head.astro"
+import Header from "../components/Header.astro"
+import Nav from "../components/Nav.astro"
+import TOC from "../components/TOC.astro"
+
+let {description = "Looks like the developers forgot to include a description for this page. Sorry about that.", frontmatter = {}, headings = [], title = ""} = Astro.props
+title = frontmatter.title ? frontmatter.title : title
+description = frontmatter.description ? frontmatter.description : description
+---
+
+<!DOCTYPE html>
+<html class="antialiased" lang="en">
+<Head/>
+<body class="bg-white text-slate-700 dark:bg-slate-900 dark:text-slate-200">
+  <Header/>
+
+  <main class="max-w-8xl mx-auto px-4 py-8">
+    <!-- Left sidebar -->
+    <div id="side-nav" class="bg-white bottom-0 fixed hidden left-0 overflow-y-auto pb-10 pt-4 px-4 right-0 top-0 z-10 dark:bg-slate-900 lg:block lg:left-[max(0px,calc(50%-45rem))] lg:pt-0 lg:right-auto lg:top-[3.85rem] lg:w-[19rem]">
+      <!-- Relative container for the sticky search -->
+      <div class="relative">
+        <!-- Mobile close button -->
+        <button type="button" class="absolute ml-6 right-1 top-0 lg:hidden" data-widget="visibility-button" data-element="side-nav">
+          <i class="fa-regular fa-x text-lg"></i>
+        </button>
+
+        <!-- Search button -->
+        <div class="bg-white hidden pb-6 pt-8 sticky top-0 z-10 dark:bg-slate-900 lg:block">
+          <button type="button" class="flex items-center pl-2 pr-3 py-1.5 border border-slate-900/10 rounded-md shadow-sm text-slate-400 text-sm w-full dark:bg-slate-800 dark:highlight-white/5 dark:hover:bg-slate-700 dark:hover:border-slate-500 hover:border-slate-300" data-widget="search-button">
+            <i class="fa-light fa-magnifying-glass mr-3"></i>
+            <span>Search...</span>
+            <span class="font-semibold ml-auto pl-3 text-xs">⌘K</span>
+          </button>
+        </div>
+
+        <!-- Sidebar nav -->
+        <Nav/>
+      </div>
+    </div>
+
+    <!-- Main content section -->
+    <article class="max-w-none pb-24 prose prose-slate dark:prose-code:bg-slate-800 dark:prose-code:border-blue-800 dark:prose-invert dark:prose-headings:text-indigo-400 lg:px-[19rem] prose-headings:scroll-mt-24 prose-headings:text-indigo-600 prose-code:bg-slate-100 prose-code:border prose-code:border-blue-300 prose-code:border-dashed prose-code:p-0.5 prose-code:rounded-sm">
+      <h1 class="text-lg">{title}</h1>
+      <slot/>
+    </article>
+
+    <!-- Table of contents -->
+    <aside class="bottom-0 fixed hidden left-auto overflow-y-auto pb-10 pt-8 px-4 right-[max(0px,calc(50%-45rem))] top-[3.5rem] w-[19rem] lg:block">
+      <nav>
+        <TOC toc={headings}/>
+      </nav>
+    </aside>
+  </main>
+
+  <!-- Search modal -->
+  <div class="backdrop-blur-sm bg-slate-500/10 fixed flex items-center justify-center hidden inset-0 overflow-auto z-20" data-widget="search">
+    <div class="bg-white border border-slate-900/10 flex flex-col h-4/5 max-w-4xl mx-auto rounded-md shadow-2xl text-slate-500 w-11/12 dark:bg-slate-800 dark:border-slate-100/10 dark:text-slate-400">
+      <header class="border-b border-slate-900/10 flex flex-shrink items-center px-6 py-4 dark:border-slate-100/10">
+        <i class="fa-regular fa-magnifying-glass mr-4"></i>
+        <input type="text" class="border-0 bg-transparent mr-4 w-full" placeholder="Search" data-widget="search-input"/>
+        <i class="hidden fa-solid fa-loader fa-spin mr-4" style="--fa-animation-duration: 3s;" data-widget="search-loading-icon"></i>
+        <button class="bg-slate-100 px-1.5 py-1 rounded-md text-[0.5rem] dark:bg-slate-700" data-widget="search-close">ESC</button>
+      </header>
+      <div class="overflow-auto py-4">
+        <!-- Search results -->
+        <div data-widget="search-results">
+          <h2 class="flex font-medium items-center pb-4 pt-2 px-6 text-slate-700 dark:text-slate-200">Results</h2>
+          <ul class="px-6 py-4 space-y-2">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
