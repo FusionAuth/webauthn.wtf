@@ -7,7 +7,7 @@ description: "How it Works"
 As WebAuthn continues to gain momentum as a standard for secure and user-friendly passwordless authentication, you can expect its support to expand even further across various devices, operating systems, and browsers.
 
 # Web Browsers
-Based on caniuse.com, as of April 2023, WebAuthn is supported on 94.98% of all global browsers including popular browsers like Google Chrome, Microsoft Edge, and Apple’s Safari.
+Based on [Can I use](https://caniuse.com/?search=webauthn), as of April 2023 WebAuthn is supported on 94.98% of all global browsers including popular browsers like Google Chrome, Microsoft Edge, and Apple’s Safari.
 
 | Browser           | Supported? |
 |-------------------|-----------:|
@@ -19,7 +19,7 @@ Based on caniuse.com, as of April 2023, WebAuthn is supported on 94.98% of all g
 | Internet Explorer |         No |
 
 # Mobile Browsers
-Based on caniuse.com, as of April 2023, WebAuthn is supported on 95.75% of all global mobile browsers including popular browsers like Chrome for Android, Safari on iOS, and Samsung Internet.
+Based on [Can I use](https://caniuse.com/?search=webauthn), as of April 2023 WebAuthn is supported on 95.75% of all global mobile browsers including popular browsers like Chrome for Android, Safari on iOS, and Samsung Internet.
 
 | Browser                | Supported? |
 |------------------------|-----------:|
@@ -36,4 +36,4 @@ Based on caniuse.com, as of April 2023, WebAuthn is supported on 95.75% of all g
 | KaiOS Browser          |         No |
 
 # Device Support
-WebAuthn is supported by a wide range of devices and platforms, including desktop computers, laptops, smartphones, and tablets. In addition to the browsers above, popular operating systems, including Windows and macOS support it. Check out passkeys.dev for full device support details. Sorry Ubunto users; no support for you.
+WebAuthn is supported by a wide range of devices and platforms, including desktop computers, laptops, smartphones, and tablets. Check out [passkeys.dev](https://passkeys.dev/device-support/) for more information on device support and compatibility of passkeys across different devices.
