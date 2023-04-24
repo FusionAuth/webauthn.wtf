@@ -4,3 +4,44 @@ title: "Authentication"
 description: "How it Works"
 ---
 
+Authentication is one of two ceremonies defined in the WebAuthn specification. The authentication ceremony is used to authenticate a user with a previously registered passkey.
+
+# The process
+The basic process for the WebAuthn authentication ceremony is that the Relying Party supplies passkey request options along with a one-time challenge that is passed to the WebAuthn API on the client. The WebAuthn API will query available authenticators for a suitable passkey that can complete the authentication ceremony. The Relying Party has the option to provide a list of credential identifiers for passkeys that it will allow or the request can be made without this list to query for discoverable passkeys.
+
+[//]: # (TODO : render diagram)
+```mermaid
+sequenceDiagram
+    autonumber
+    participant A as Authenticator
+    participant C as Client
+    participant S as Server
+    C->>S: "I want to sign in"
+    S->>C: "Ok. Sign this data,<br/>so I know it's you"
+    C->>A: "Use the private key for my<br/>account to sign this data"
+    A->>A: Sign data with <br/>private key
+    A->>C: "Here's the signed data"
+    C->>S: "Here's that signed data as proof<br/>that it's really me"
+    S->>S: Validate signature
+    S->>C: "You're all set!"
+```
+
+# The options
+The Relying Party provides `PublicKeyCredentialRequestOptions` during an authentication ceremony. A few of the most important options are:
+
+* The Relying Party identifier must be provided if it was not defaulted during registration.
+* The user verification requirement. The ability to provide user verification enhances the security of the ceremony, but it may not be necessary for all use cases.
+* A list of credential identifiers for passkeys that are allowed to complete this ceremony. Using an empty list for this option will query for discoverable passkeys.
+
+The WebAuthn specification has more information on [options for credential requests](https://www.w3.org/TR/2021/WD-webauthn-3-20210427/#dictionary-assertion-options).
+
+# The validation
+The authenticator response is returned to the client via the WebAuthn API and then passed along to the Relying Party server for validation. The Relying Party should validate the response to ensure that requested options were honored and that the signature can be validated with the stored private key. A few of the more important fields to validate are:
+
+* The credential identifier. If a particular list of passkeys was requested, ensure that the selected identifier matches one of those requested.
+* The user presence flag. User presence is always required. The user verification flag should be set if it was requested.
+* The origin. This must match the Relying Party's origin.
+* The signature count. If the response contains a non-zero signature count, it should be greater than the previously known value.
+* The signature. The signature is generated with the private key across other fields or hashes of fields on the response to prevent tampering.
+
+If the response is successfully validated, the Relying Party should consider the ceremony a success and continue the authentication workflow.
