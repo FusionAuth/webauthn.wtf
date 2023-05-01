@@ -32,11 +32,7 @@ The client-side implementation for the Relying Party is much simpler. The high-l
 5. Send the WebAuthn response to the Relying Party server
 
 ## JavaScript Binary Transformation
-The transformation steps are required because binary fields on the response from the Relying Party are most likely base64-encoded for transport over the network, but the WebAuthn JavaScript API requires these to be [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)s. Likewise, the WebAuthn JavaScript API will return binary fields as `ArrayBuffer`s that need to be base64-encoded before sending the response to the Relying Party server.
-
-And these passkey assertion options need to be converted to `ArrayBuffer`s before being passed to the `navigator.credentials.get()` method:
-* `challenge`
-* `allowCredentials[x].id`
+The transformation steps are required because binary fields on the response from the Relying Party are most likely base64url-encoded for transport over the network, but the WebAuthn JavaScript API requires these to be [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)s. Likewise, the WebAuthn JavaScript API will return binary fields as `ArrayBuffer`s that need to be base64url-encoded before sending the response to the Relying Party server.
 
 The following snippet can perform the conversion from a base64url-encoded string to an `ArrayBuffer`.
 
@@ -49,11 +45,6 @@ function base64URLToBuffer(base64URL) {
 ```
 
 The responses from the WebAuthn JavaScript API include binary fields that should be converted to base64url-encoded strings before sending the response to the Relying Party server.
-
-And these fields on the `navigator.credentials.get()` response need to be converted:
-* `credential.response.authenticatorData`
-* `credential.response.clientDataJSON`
-* `credential.response.signature`
 
 The following snippet can perform the conversion from `ArrayBuffer` to base64url-encoded string.
 
@@ -97,7 +88,7 @@ const options =  {
 }
 ```
 
-An `options` object like the one above is passed to the WebAuthn API which returns a `Promise` that resolves with a new [`PublicKeyCredential`](https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential) if one was created or `null` if a new passkey could not be created.
+An `options` object like the one above is passed to the WebAuthn API which returns a `Promise` that resolves with a new [`PublicKeyCredential`](https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential) if one was created, or `null` if a new passkey could not be created.
 
 ```javascript
 navigator.credentials.create(options)
@@ -116,3 +107,40 @@ The following fields on the response need to be converted to base64url-encoded s
 
 After serialization, the WebAuthn API response can be sent to the Relying Party for validation and storage.
 
+## Authentication
+The authentication ceremony uses the WebAuthn API's [`navigator.credentials.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get) method to assert the user's possession of a previously registered passkey. The method accepts [`PublicKeyCredentialRequestOptions`](https://www.w3.org/TR/2021/WD-webauthn-3-20210427/#dictionary-assertion-options).
+
+These passkey request options will likely be base64url-encoded for network transport and need to be converted to `ArrayBuffer`s before being passed to the `navigator.credentials.get()` method:
+* `challenge` - a one-time challenge to prevent replay attacks
+* `allowCredentials[x].id` - identifiers for passkeys that are eligible to complete this request
+
+Here are sample options:
+
+```javascript
+const options = {
+  publicKey: {
+    rpId: "webauthn.wtf",
+    challenge: [ /** ArrayBuffer */ ],
+    userVerification: "preferred",
+    allowCredentials: [ { type: "public-key", id: [ /** ArrayBuffer */ ] } ]
+  }
+}
+```
+
+An `options` object like the one above is passed to the WebAuthn API which returns a `Promise` that resolves with an existing [`PublicKeyCredential`](https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential) that was used to complete the authentication ceremony.
+
+```javascript
+navigator.credentials.get(options)
+  .then(function (credential) {
+    // Send authentication status to server
+  }).catch(function (err) {
+    // No acceptable passkey or user refused consent
+  });
+```
+
+The following fields on the response need to be converted to base64url-encoded strings before sending to the Relying Party server:
+* `credential.response.authenticatorData`
+* `credential.response.clientDataJSON`
+* `credential.response.signature`
+
+After serialization, the WebAuthn API response can be sent to the Relying Party for validation and to complete or fail the authentication ceremony.
