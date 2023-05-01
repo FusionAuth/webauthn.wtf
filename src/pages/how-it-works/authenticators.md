@@ -9,7 +9,6 @@ There are a wide range of WebAuthn-compatible authenticators available, from mob
 # Requirements
 All authenticators must meet a few requirements to be eligible for use with WebAuthn. The first is the ability to generate a public-private key pair that is core to verifying a user's identity during authentication. It must be able to respond to requests by using a passkey to generate a cryptographic signature that can be verified by the Relying Party using the associated public key. Authenticators must also support some kind of authorization gesture from a user to prove user presence. This could be responding to a prompt on a mobile device, scanning a fingerprint sensor, or touching a capacitive area on a security key.
 
-
 # User verification
 All authenticators must support a test for user presence, but authenticators may also provide user verification. User verification most commonly comes in the form of a PIN, pattern, or biometric scan. One example of user verification is using a fingerprint sensor during a WebAuthn ceremony, which provides both user presence and user verification in one step. An authenticator that supports user verification can be used in a wider variety of contexts than one that does not and provides two factors of authentication in one step: something you have (the authenticator), and something you know (e.g. PIN) or something you are (e.g. fingerprint).
 
