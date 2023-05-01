@@ -2,24 +2,20 @@
 import ThemeSelector from "./ThemeSelector.astro";
 const nav = [
   {
-    "title": "Quickstarts",
-    "path": "/quickstarts/"
+    "title": "Basics",
+    "path": "/how-it-works/basics"
   },
   {
-    "title": "Docs",
-    "path": "/docs/"
+    "title": "Develop",
+    "path": "/develop/build-it-yourself"
   },
   {
-    "title": "Articles",
-    "path": "/articles/"
+    "title": "Reference",
+    "path": "/reference/glossary"
   },
   {
-    "title": "API Docs",
-    "path": "/docs/v1/apis/"
-  },
-  {
-    "title": "SDKs",
-    "path": "/docs/v1/sdks/"
+    "title": "History",
+    "path": "/history/about"
   }
 ];
 const { breadcrumbs = [], displaySearchButton = false, themeable = true} = Astro.props;
@@ -57,7 +53,7 @@ const { breadcrumbs = [], displaySearchButton = false, themeable = true} = Astro
             </button>
         }
 
-        <a href="https://github.com/fusionauth/fusionauth-issues" class="flex items-center border border-slate-500 mt-5 rounded-lg p-2 text-slate-500 w-48 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border-0 lg:mt-0 lg:p-0 lg:text-slate-400 lg:w-auto lg:dark:hover:bg-transparent lg:hover:bg-transparent">
+        <a href="https://github.com/fusionauth/webauthn.wtf" class="flex items-center border border-slate-500 mt-5 rounded-lg p-2 text-slate-500 w-48 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border-0 lg:mt-0 lg:p-0 lg:text-slate-400 lg:w-auto lg:dark:hover:bg-transparent lg:hover:bg-transparent">
           <i class="fa-brands fa-github fa-fw text-lg"></i>
           <span class="ml-2 lg:hidden">GitHub</span>
         </a>
