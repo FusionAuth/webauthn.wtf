@@ -3,28 +3,14 @@ layout: ../../layouts/Layout.astro
 title: "Registration"
 description: "How it Works"
 ---
+import Diagram from "../../diagrams/pages/how-it-works/registration.astro";
 
 Registration is one of two ceremonies defined in the WebAuthn specification. The registration ceremony is used to register a new passkey with a Relying Party that can be used to authenticate the user in the future.
 
 # The process
 The basic process for the WebAuthn registration ceremony is that the Relying Party supplies passkey creation options along with a one-time challenge that is passed to the WebAuthn API on the client. The user selects among the available authenticators that meet the requirements of the creation options from the Relying Party, authorizes the action, and then the response is sent back to the Relying Party for validation and storage.
 
-[//]: # (TODO : render diagram)
-```mermaid
-sequenceDiagram
-    autonumber
-    participant A as Authenticator
-    participant C as Client
-    participant S as Server
-    C->>S: "I would like to register.<br/>My email is joe@example.com"
-    Note right of S: Check whether this user exists<br/>and has existing passkeys
-    S->>C: "Sure thing. Here are the options I require"
-    C->>A: "Generate a new passkey"
-    A->>A: Generate key
-    A->>C: "Here you go. I'll hold onto the<br/>private key for you"
-    C->>S: "Here's the public key<br/>and some info about the authenticator"
-    S->>S: Validate response,<br/>store public key
-```
+<Diagram/>
 
 # The options
 The Relying Party provides `PublicKeyCredentialCreationOptions` during a registration ceremony. These options include information about the Relying Party, the user, and requirements for authenticator selection. The authenticator selection criteria allow the Relying Party to restrict eligible authenticators to meet security or workflow requirements. A few of the most important options are:

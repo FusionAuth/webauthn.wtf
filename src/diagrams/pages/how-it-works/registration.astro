@@ -1,0 +1,21 @@
+---
+import Diagram from "../../../components/mermaid/Diagram.astro";
+
+const diagram = `
+sequenceDiagram
+    autonumber
+    participant A as Authenticator
+    participant C as Client
+    participant S as Server
+    C->>S: "I would like to register.<br/>My email is joe@example.com"
+    Note right of S: Check whether this user exists<br/>and has existing passkeys
+    S->>C: "Sure thing. Here are the options I require"
+    C->>A: "Generate a new passkey"
+    A->>A: Generate key
+    A->>C: "Here you go. I'll hold onto the<br/>private key for you"
+    C->>S: "Here's the public key<br/>and some info about the authenticator"
+    S->>S: Validate response,<br/>store public key
+`;
+---
+
+<Diagram code={diagram}/>

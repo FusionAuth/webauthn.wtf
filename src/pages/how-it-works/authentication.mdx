@@ -3,28 +3,14 @@ layout: ../../layouts/Layout.astro
 title: "Authentication"
 description: "How it Works"
 ---
+import Diagram from "../../diagrams/pages/how-it-works/registration.astro";
 
 Authentication is one of two ceremonies defined in the WebAuthn specification. The authentication ceremony is used to authenticate a user with a previously registered passkey.
 
 # The process
 The basic process for the WebAuthn authentication ceremony is that the Relying Party supplies passkey request options along with a one-time challenge that is passed to the WebAuthn API on the client. The WebAuthn API will query available authenticators for a suitable passkey that can complete the authentication ceremony. The Relying Party has the option to provide a list of credential identifiers for passkeys that it will allow or the request can be made without this list to query for discoverable passkeys.
 
-[//]: # (TODO : render diagram)
-```mermaid
-sequenceDiagram
-    autonumber
-    participant A as Authenticator
-    participant C as Client
-    participant S as Server
-    C->>S: "I want to sign in"
-    S->>C: "Ok. Sign this data,<br/>so I know it's you"
-    C->>A: "Use the private key for my<br/>account to sign this data"
-    A->>A: Sign data with <br/>private key
-    A->>C: "Here's the signed data"
-    C->>S: "Here's that signed data as proof<br/>that it's really me"
-    S->>S: Validate signature
-    S->>C: "You're all set!"
-```
+<Diagram/>
 
 # The options
 The Relying Party provides `PublicKeyCredentialRequestOptions` during an authentication ceremony. A few of the most important options are:

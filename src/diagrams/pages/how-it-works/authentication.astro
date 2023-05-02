@@ -1,0 +1,21 @@
+---
+import Diagram from "../../../components/mermaid/Diagram.astro";
+
+const diagram = `
+sequenceDiagram
+    autonumber
+    participant A as Authenticator
+    participant C as Client
+    participant S as Server
+    C->>S: "I want to sign in"
+    S->>C: "Ok. Sign this data,<br/>so I know it's you"
+    C->>A: "Use the private key for my<br/>account to sign this data"
+    A->>A: Sign data with <br/>private key
+    A->>C: "Here's the signed data"
+    C->>S: "Here's that signed data as proof<br/>that it's really me"
+    S->>S: Validate signature
+    S->>C: "You're all set!"
+`;
+---
+
+<Diagram code={diagram}/>
