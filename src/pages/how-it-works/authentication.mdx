@@ -7,12 +7,12 @@ import Diagram from "../../diagrams/pages/how-it-works/registration.astro";
 
 Authentication is one of two ceremonies defined in the WebAuthn specification. The authentication ceremony is used to authenticate a user with a previously registered passkey.
 
-# The process
+## The process
 The basic process for the WebAuthn authentication ceremony is that the Relying Party supplies passkey request options along with a one-time challenge that is passed to the WebAuthn API on the client. The WebAuthn API will query available authenticators for a suitable passkey that can complete the authentication ceremony. The Relying Party has the option to provide a list of credential identifiers for passkeys that it will allow or the request can be made without this list to query for discoverable passkeys.
 
 <Diagram/>
 
-# The options
+## The options
 The Relying Party provides `PublicKeyCredentialRequestOptions` during an authentication ceremony. A few of the most important options are:
 
 * The Relying Party identifier must be provided if it was not defaulted during registration.
@@ -21,7 +21,7 @@ The Relying Party provides `PublicKeyCredentialRequestOptions` during an authent
 
 The WebAuthn specification has more information on [options for credential requests](https://www.w3.org/TR/2021/WD-webauthn-3-20210427/#dictionary-assertion-options).
 
-# The validation
+## The validation
 The authenticator response is returned to the client via the WebAuthn API and then passed along to the Relying Party server for validation. The Relying Party should validate the response to ensure that requested options were honored and that the signature can be validated with the stored private key. A few of the more important fields to validate are:
 
 * The credential identifier. If a particular list of passkeys was requested, ensure that the selected identifier matches one of those requested.

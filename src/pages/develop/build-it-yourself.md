@@ -10,7 +10,7 @@ In order to build your own WebAuthn implementation, you will need to implement t
 
 Continue reading for more detail on each side of the implementation and some sample code for WebAuthn registration and authentication ceremonies.
 
-# Server-side implementation
+## Server-side implementation
 The server-side is where most of the WebAuthn code will exist. The Relying Party needs to decide which options they will allow for each of the WebAuthn ceremonies and what information they require to make a trust decision for a particular authenticator. You can find more information on some important options on the [registration](/how-it-works/registration#the-options) and [authentication](/how-it-works/authentication#the-options) flow pages. In order to increase trust in the authenticator a Relying Party may decide to require [attestation](/how-it-works/registration#the-attestation) during the registration ceremony.
 
 The Relying Party server must support the following operations:
@@ -23,7 +23,7 @@ The options provided by the Relying Party may vary depending on the use case for
 
 Most of the WebAuthn specification is dedicated to describing the API and its interaction with authenticators, but there are step-by-step instructions for the Relying Party to [register a new passkey](https://www.w3.org/TR/2021/WD-webauthn-3-20210427/#sctn-registering-a-new-credential) and [authenticate using an existing passkey](https://www.w3.org/TR/2021/WD-webauthn-3-20210427/#sctn-verifying-assertion). Authenticator response validation on the Relying Party server will vary depending on the requirements and options that the Relying Party has settled on for each ceremony.
 
-# Client-side implementation
+## Client-side implementation
 The client-side implementation for the Relying Party is much simpler. The high-level code for both registration and authentication ceremonies on the client is:
 1. Receive the relevant options object from the Relying Party server
 2. Transform the options object to be compatible with WebAuth API calls
@@ -31,7 +31,7 @@ The client-side implementation for the Relying Party is much simpler. The high-l
 4. Transform the WebAuthn API response to be compatible with network transfer to the Relying Party server
 5. Send the WebAuthn response to the Relying Party server
 
-## JavaScript Binary Transformation
+### JavaScript Binary Transformation
 The transformation steps are required because binary fields on the response from the Relying Party are most likely base64url-encoded for transport over the network, but the WebAuthn JavaScript API requires these to be [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)s. Likewise, the WebAuthn JavaScript API will return binary fields as `ArrayBuffer`s that need to be base64url-encoded before sending the response to the Relying Party server.
 
 The following snippet can perform the conversion from a base64url-encoded string to an `ArrayBuffer`.
@@ -59,7 +59,7 @@ function bufferToBase64URL(buffer) {
 }
 ```
 
-## Registration
+### Registration
 Passkey registration uses the WebAuthn API's [`navigator.credentials.create()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/create) method. The method accepts [`PublicKeyCredentialCreationOptions`](https://www.w3.org/TR/2021/WD-webauthn-3-20210427/#dictionary-makecredentialoptions).
 
 The following fields on the passkey registration options will likely be base64url-encoded for network transport and need to be converted to `ArrayBuffer`s before being passed to the `navigator.credentials.create()` WebAuthn API method:
@@ -107,7 +107,7 @@ The following fields on the response need to be converted to base64url-encoded s
 
 After serialization, the WebAuthn API response can be sent to the Relying Party for validation and storage.
 
-## Authentication
+### Authentication
 The authentication ceremony uses the WebAuthn API's [`navigator.credentials.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get) method to assert the user's possession of a previously registered passkey. The method accepts [`PublicKeyCredentialRequestOptions`](https://www.w3.org/TR/2021/WD-webauthn-3-20210427/#dictionary-assertion-options).
 
 These passkey request options will likely be base64url-encoded for network transport and need to be converted to `ArrayBuffer`s before being passed to the `navigator.credentials.get()` method:
