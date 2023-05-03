@@ -1,5 +1,5 @@
 ---
-const { toc, depth = 2, ...props } = Astro.props
+const { toc, depth = 1, ...props } = Astro.props
 const headings = toc.filter((it) => it.depth === depth)
 const notFirstLevel = depth !== 1;
 ---
