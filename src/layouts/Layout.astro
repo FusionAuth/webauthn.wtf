@@ -50,7 +50,9 @@ description = frontmatter.description ? frontmatter.description : description
     <!-- Table of contents -->
     <aside class="bottom-0 fixed hidden left-auto overflow-y-auto pb-10 pt-8 px-4 right-[max(0px,calc(50%-45rem))] top-[3.5rem] w-[19rem] lg:block">
       <nav>
-        <TOC toc={headings}/>
+        {headings.some(h => h.depth === 2) &&
+          <TOC toc={headings}/>
+        }
       </nav>
     </aside>
   </main>
