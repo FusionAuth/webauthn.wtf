@@ -1,7 +1,8 @@
 ---
-const { toc, depth = 1, ...props } = Astro.props
-const headings = toc.filter((it) => it.depth === depth)
-const notFirstLevel = depth !== 1;
+const startLevel = 2;
+const { toc, depth = startLevel, ...props } = Astro.props;
+const headings = toc.filter((it) => it.depth === depth);
+const notFirstLevel = depth !== startLevel;
 ---
 
 <p class="font-bold text-sm mb-5">On this page</p>
@@ -17,7 +18,7 @@ const notFirstLevel = depth !== 1;
         <li>
           <div class="group" data-widget="scroll-spy-item">
             <a href={"#" + it.slug} class="block font-medium text-slate-600 text-sm dark:text-slate-400 dark:group-[.active]:text-indigo-400 dark:hover:text-slate-100 group-[.active]:text-indigo-600 hover:text-slate-900">
-              {depth > 1 && <i class="fa-regular fa-angle-right mr-2 text-xs"></i>}
+              {depth > startLevel && <i class="fa-regular fa-angle-right mr-2 text-xs"></i>}
               {it.text}
             </a>
           </div>
