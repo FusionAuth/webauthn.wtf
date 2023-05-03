@@ -1,10 +1,12 @@
 ---
-layout: ../../layouts/Layout.astro
-title: "FIDO Protocols"
-description: "History of WebAuthn"
+layout: ../layouts/Layout.astro
+title: "FIDO Alliance"
+description: "WebAuthn"
 ---
 
-The [protocols](https://fidoalliance.org/specifications/) developed by FIDO are U2F, UAF, and FIDO2. FIDO2, which includes the W3C's WebAuthn specification, is the most comprehensive and widely adopted standard for passwordless authentication on the web while U2F and UAF are earlier attempts to enhance security and user-experience with more limited capabilities.
+The [FIDO (Fast IDentity Online) Alliance](https://fidoalliance.org/) is an open industry association of leading technology companies that works to develop, promote, and establish open standards for stronger authentication. Their mission is to create “authentication standards to help reduce the world’s over-reliance on passwords.” It was launched publicly in 2013 and has since grown to include over 300 companies.
+
+As part of their mission, the FIDO Alliance has developed a number of [protocols](https://fidoalliance.org/specifications/) including U2F, UAF, and FIDO2. FIDO2, which includes the W3C's WebAuthn specification, is the most comprehensive and widely adopted standard for passwordless authentication on the web while U2F and UAF are earlier attempts to enhance security and user-experience with more limited capabilities.
 
 # U2F (Universal 2nd Factor)
 Universal 2nd Factor relies on physical hardware connected via USB, NFC, or Bluetooth in order to provide a strong second factor in addition to a username and password. The strong second factor allows for simpler passwords without compromising security. After the release of FIDO2, U2F has been relabeled CTAP1 (Client-to-Authenticator Protocol). FIDO U2F devices can also be used as a second factor on browsers and operating systems that support the newer FIDO2 specification.

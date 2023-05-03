@@ -1,10 +1,10 @@
 ---
-layout: ../../layouts/Layout.astro
-title: "About"
-description: "History of WebAuthn"
+layout: ../layouts/Layout.astro
+title: "History of WebAuthn"
+description: "WebAuthn"
 ---
 
-WebAuthn is an open standard that was developed as a joint effort by the [FIDO Alliance](/history/fido-alliance) and the World Wide Web Consortium (W3C). It was first proposed in 2013 as a way to provide secure authentication on the web without requiring passwords.
+WebAuthn is an open standard that was developed as a joint effort by the [FIDO Alliance](/src/pages/fido-alliance.md) and the World Wide Web Consortium (W3C). It was first proposed in 2013 as a way to provide secure authentication on the web without requiring passwords.
 
 WebAuthn officially became a W3C standard in 2019. Since then, it has been widely adopted by many major websites and services including Google, Facebook, and Microsoft. In addition, most major browser vendors have added WebAuthn support to their browsers such as Chrome, Firefox, Edge, and Safari.
 

@@ -2,25 +2,15 @@
   "WebAuthn": [
     {
       "path": "/",
-      "title": "Overview"
-    },
-    {
-      "path": "/what-is-webauthn",
       "title": "What is WebAuthn?"
-    }
-  ],
-  "History of WebAuthn": [
-    {
-      "path": "/history/about",
-      "title": "About"
     },
     {
-      "path": "/history/fido-alliance",
+      "path": "/history",
+      "title": "History of WebAuthn"
+    },
+    {
+      "path": "/fido-alliance",
       "title": "FIDO Alliance"
-    },
-    {
-      "path": "/history/fido-protocols",
-      "title": "FIDO Protocols"
     }
   ],
   "How it works": [
