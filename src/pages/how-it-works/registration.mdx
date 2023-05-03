@@ -8,7 +8,7 @@ import Diagram from "../../diagrams/pages/how-it-works/registration.astro";
 Registration is one of two ceremonies defined in the WebAuthn specification. The registration ceremony is used to register a new passkey with a Relying Party that can be used to authenticate the user in the future.
 
 ## The process
-The basic process for the WebAuthn registration ceremony is that the Relying Party supplies passkey creation options along with a one-time challenge that is passed to the WebAuthn API on the client. The user selects among the available authenticators that meet the requirements of the creation options from the Relying Party, authorizes the action, and then the response is sent back to the Relying Party for validation and storage.
+The basic process for the WebAuthn registration ceremony is that the Relying Party supplies passkey creation options along with a one-time challenge that is passed to the WebAuthn API in the browser. The user selects among the available authenticators that meet the requirements of the creation options from the Relying Party, authorizes the action, and then the response is sent back to the Relying Party for validation and storage.
 
 <Diagram/>
 

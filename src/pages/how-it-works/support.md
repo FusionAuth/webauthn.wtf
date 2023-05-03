@@ -7,7 +7,7 @@ description: "How it Works"
 As WebAuthn continues to gain momentum as a standard for secure and user-friendly passwordless authentication, you can expect its support to expand even further across various devices, operating systems, and browsers.
 
 ## Web Browsers
-Based on [Can I use](https://caniuse.com/?search=webauthn), as of April 2023 WebAuthn is supported on 94.98% of all global browsers including popular browsers like Google Chrome, Microsoft Edge, and Apple’s Safari.
+At the time of this writing [Can I use](https://caniuse.com/?search=webauthn) reports that WebAuthn is supported on 94.98% of all global browsers including popular browsers like Google Chrome, Microsoft Edge, and Apple’s Safari.
 
 | Browser           | Supported? |
 |-------------------|-----------:|
@@ -19,7 +19,7 @@ Based on [Can I use](https://caniuse.com/?search=webauthn), as of April 2023 Web
 | Internet Explorer |         No |
 
 ## Mobile Browsers
-Based on [Can I use](https://caniuse.com/?search=webauthn), as of April 2023 WebAuthn is supported on 95.75% of all global mobile browsers including popular browsers like Chrome for Android, Safari on iOS, and Samsung Internet.
+Based on [Can I use](https://caniuse.com/?search=webauthn), WebAuthn is supported on 95.75% of all global mobile browsers at the time of this writing, including popular browsers like Chrome for Android, Safari on iOS, and Samsung Internet.
 
 | Browser                | Supported? |
 |------------------------|-----------:|

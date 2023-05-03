@@ -22,7 +22,7 @@ The Relying Party provides `PublicKeyCredentialRequestOptions` during an authent
 The WebAuthn specification has more information on [options for credential requests](https://www.w3.org/TR/2021/WD-webauthn-3-20210427/#dictionary-assertion-options).
 
 ## The validation
-The authenticator response is returned to the client via the WebAuthn API and then passed along to the Relying Party server for validation. The Relying Party should validate the response to ensure that requested options were honored and that the signature can be validated with the stored private key. A few of the more important fields to validate are:
+The authenticator response is returned to the client via the WebAuthn API and then passed along to the Relying Party server for validation. The Relying Party should validate the response to ensure that requested options were honored and that the signature can be validated with the stored public key. A few of the more important fields to validate are:
 
 * The credential identifier. If a particular list of passkeys was requested, ensure that the selected identifier matches one of those requested.
 * The user presence flag. User presence is always required. The user verification flag should be set if it was requested.

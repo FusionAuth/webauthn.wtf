@@ -18,4 +18,4 @@ The W3C has published two versions of the WebAuthn specification as Recommendati
 ## The Rise of Passwordless Authentication
 The development of WebAuthn was motivated by the industry's need for a more secure and user-friendly authentication mechanism.
 * **Security**: Passwords are often vulnerable to phishing, credential stuffing, and brute force attacks. WebAuthn uses public-key credentials scoped to a specific domain along with optional verification to authenticate users, eliminating the need for passwords.
-* **User Experience**: It can be difficult for users to manage all of their unique passwords across multiple websites and applications. Forgot passwords lead to locked accounts, password resets, and the headaches that go along with them. WebAuthn enables a true passwordless experience.
+* **User Experience**: It can be difficult for users to manage all of their unique passwords across multiple websites and applications. Forgotten passwords lead to locked accounts, password resets, and the headaches that go along with them. WebAuthn enables a true passwordless experience.

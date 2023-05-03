@@ -17,11 +17,11 @@ An authenticator is a piece of dedicated hardware, a hardware subsystem, or soft
 Authenticators vary in a few areas such as whether they are able to verify users and the list of signature algorithms they support, but they all generate key pairs and then use the private key to sign a challenge presented by the Relying Party. Authenticators must also be able to test for user presence by requiring some "authorization gesture" from the user to indicate they consent to the operation.
 
 ## The ceremonies
-The two WebAuthn workflows are registration and authentication. These workflows are referred to as "ceremonies" by the WebAuthn specification because they combine aspects of a protocol, which exists only in the digital space, with human interaction in the form of an authorization gesture.
+The two WebAuthn workflows are registration and authentication. These workflows are referred to as "ceremonies" by the WebAuthn specification because they combine aspects of a protocol, which exists only in the digital space, with human interaction in the form of an authorization gesture. This site uses the term _ceremony_ to refer to a specific, standardized workflow while _flow_ is used to refer to the user journey more generally.
 
 In the registration ceremony a Relying Party provides a set of options for generating a new passkey. If the client has access to an authenticator that can meet the requirements provided in the options, it can be selected to generate a passkey, sign the challenge from the Relying Party, and complete the registration ceremony.
 
-The authentication ceremony is similar to registration with a different set of options that may include identifiers for previously registered passkeys that are allowed to complete the authentication. If the client has access to one of the requested passkeys via an attached authenticator, the passkey can be used to sign the challenge and complete the authentication ceremony.
+The authentication ceremony uses a different set of options to locate an eligible passkey to complete the authentication. If the client has access to one of the requested passkeys via an attached authenticator, the passkey can be used to sign the challenge and complete the authentication ceremony.
 
 ## The benefits
 The benefits of WebAuthn broadly fall into two categories: security and user experience.
