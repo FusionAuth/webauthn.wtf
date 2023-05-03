@@ -5,14 +5,15 @@ import Header from "../components/Header.astro"
 import Nav from "../components/Nav.astro"
 import TOC from "../components/TOC.astro"
 
-let {description = "Looks like the developers forgot to include a description for this page. Sorry about that.", frontmatter = {}, headings = [], title = ""} = Astro.props
-title = frontmatter.title ? frontmatter.title : title
-description = frontmatter.description ? frontmatter.description : description
+let {description = "Looks like the developers forgot to include a description for this page. Sorry about that.", frontmatter = {}, headings = [], section = "", title = ""} = Astro.props;
+section = frontmatter.section ? frontmatter.section : section;
+title = frontmatter.title ? frontmatter.title : title;
+description = frontmatter.description ? frontmatter.description : description;
 ---
 
 <!DOCTYPE html>
 <html class="antialiased" lang="en">
-<Head title={title} description={description} />
+<Head title={title} section={section} description={description} />
 <body class="bg-white text-slate-700 dark:bg-slate-900 dark:text-slate-200">
   <Header/>
 
@@ -42,7 +43,7 @@ description = frontmatter.description ? frontmatter.description : description
 
     <!-- Main content section -->
     <article class="max-w-none pb-24 prose prose-slate dark:prose-code:bg-slate-800 dark:prose-code:border-blue-800 dark:prose-invert dark:prose-headings:text-indigo-400 lg:px-[19rem] prose-headings:scroll-mt-24 prose-headings:text-indigo-600 prose-code:bg-slate-100 prose-code:border prose-code:border-blue-300 prose-code:border-dashed prose-code:p-0.5 prose-code:rounded-sm">
-      <p class="text-sm font-medium text-indigo-400 dark:text-indigo-600">{description}</p>
+      <p class="text-sm font-medium text-indigo-400 dark:text-indigo-600">{section}</p>
       <h1>{title}</h1>
       <slot/>
     </article>

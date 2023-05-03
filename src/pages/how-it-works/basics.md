@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "How it Works"
 title: "WebAuthn Basics"
-description: "How it Works"
+description: ""
 ---
 
 WebAuthn is an API specification that allows authenticating users via public-key cryptography. Continue reading for the basics of WebAuthn, or check out the other pages in this section to dive into the details.

@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "How it Works"
 title: "Authenticators"
-description: "How it Works"
+description: ""
 ---
 
 There are a wide range of WebAuthn-compatible authenticators available, from mobile phones to dedicated hardware devices, that support a variety of features. Read on for more information on the features that set authenticators apart.

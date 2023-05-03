@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "Reference"
 title: "Resources"
-description: "Reference"
+description: ""
 ---
 
 ## Awesome WebAuthn

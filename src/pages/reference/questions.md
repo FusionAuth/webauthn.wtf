@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "Reference"
 title: "Common Questions"
-description: "Reference"
+description: ""
 ---
 
 ## What is WebAuthn?

@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "Develop"
 title: "Demos"
-description: "Develop"
+description: ""
 ---
 
 There are a number of sites that allow you see WebAuthn in action. Check out one of these demos to test drive yourself!

@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "How it Works"
 title: "Browser & Device Support"
-description: "How it Works"
+description: ""
 ---
 
 As WebAuthn continues to gain momentum as a standard for secure and user-friendly passwordless authentication, you can expect its support to expand even further across various devices, operating systems, and browsers.

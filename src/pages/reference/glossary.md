@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "Reference"
 title: "Glossary"
-description: "Reference"
+description: ""
 ---
 
 In this glossary, we define and explain common terms and acronyms to help you get a better understanding of the WebAuthn ecosystem.

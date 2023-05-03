@@ -1,7 +1,8 @@
 ---
 layout: ../layouts/Layout.astro
+section: "WebAuthn"
 title: "What is WebAuthn?"
-description: "WebAuthn"
+description: ""
 ---
 
 WebAuthn, and commitments from tech giants like Apple, Google, and Microsoft to implement and support the specification, brings the world one big step closer to a passwordless future. With WebAuthn, users can authenticate to websites in their browser using the same mechanism they use to unlock their device, including PIN, pattern, and biometric options. This website serves as a go-to guide for developers to learn more about WebAuthn and how to start using it in your applications.

@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "Develop"
 title: "Debuggers"
-description: "Develop"
+description: ""
 ---
 
 Demos are great to see examples of how an end user may interact with WebAuthn, but developers may be interested in the details of authenticator interaction. Check out these tools to help with your WebAuthn implementation.

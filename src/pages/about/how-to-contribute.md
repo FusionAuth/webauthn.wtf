@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "About"
 title: "How to Contribute"
-description: "About"
+description: ""
 ---
 
 ## How you can help

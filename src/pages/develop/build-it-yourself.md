@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Layout.astro
+section: "Develop"
 title: "Build it Yourself"
-description: "Develop"
+description: ""
 ---
 
 In order to build your own WebAuthn implementation, you will need to implement the code to act as a WebAuthn Relying Party. Most often the Relying Party code will be split between:
