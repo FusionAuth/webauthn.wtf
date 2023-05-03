@@ -5,7 +5,9 @@ const headings = toc.filter((it) => it.depth === depth);
 const notFirstLevel = depth !== startLevel;
 ---
 
-<p class="font-bold text-sm mb-5">On this page</p>
+{depth === startLevel &&
+    <p class="font-bold text-sm mb-5">On this page</p>
+}
 <ul class:list={["space-y-3", {"ml-4": notFirstLevel, "pt-3": notFirstLevel}]} data-widget="scroll-spy">
   {
     headings.map((it, idx) => {
