@@ -8,7 +8,7 @@ description: "Get the basics about WebAuthn including an overview of authenticat
 WebAuthn is an API specification that allows authenticating users via public-key cryptography. Continue reading for the basics of WebAuthn, or check out the other pages in this section to dive into the details.
 
 ## The players
-There are two parties involved in any WebAuthn workflow: the user wishing to authenticate and the entity wishing to authenticate a user (called the Relying Party, or RP, in the WebAuthn world).
+There are two parties involved in any WebAuthn workflow. The first party is the user, who wants to access some protected resource. The second party is an entity that owns a web application, or other protected resource, and requires that the user be authenticated in order to access it. In the WebAuthn world this entity is known as the Relying Party, or RP.
 
 The Relying Party will typically have both client-side code to invoke the WebAuthn API on the client and server-side code to validate responses and store details about registered passkeys. The user needs to possess an authenticator that is able to meet the requirements the Relying Party has requested.
 
