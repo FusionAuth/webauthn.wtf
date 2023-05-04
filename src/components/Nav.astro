@@ -1,5 +1,7 @@
 ---
 import nav from '../data/nav.json';
+// Remove the .html from end of pathname if it exists
+const trimmedPath = Astro.url.pathname.replace(/\.[^/.]+$/, "")
 ---
 
 <nav>
@@ -9,7 +11,7 @@ import nav from '../data/nav.json';
         <h5 class="font-semibold pb-4 text-sm">{section}</h5>
         <ul class="border-l border-slate-900/10 group mb-10 space-y-3 dark:border-slate-100/10">
           {(nav[section].map(item =>
-            <li class={(Astro.url.pathname === item.path ? "active " : "") + "group"}><a href={item.path} class="block border-l border-transparent pl-4 text-slate-700 text-sm -ml-px dark:text-slate-400 dark:hover:border-slate-400 dark:group-[.active]:border-indigo-400 dark:group-[.active]:text-indigo-400 group-[.active]:border-indigo-600 group-[.active]:font-semibold group-[.active]:text-indigo-600 hover:border-slate-900/50">{item.title}</a></li>
+            <li class:list={["group", trimmedPath === item.path ? "active" : ""]}><a href={item.path} class="block border-l border-transparent pl-4 text-slate-700 text-sm -ml-px dark:text-slate-400 dark:hover:border-slate-400 dark:group-[.active]:border-indigo-400 dark:group-[.active]:text-indigo-400 group-[.active]:border-indigo-600 group-[.active]:font-semibold group-[.active]:text-indigo-600 hover:border-slate-900/50">{item.title}</a></li>
           ))}
         </ul>
       </li>
