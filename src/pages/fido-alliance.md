@@ -17,8 +17,8 @@ Universal Authentication Framework is an earlier protocol that supports a passwo
 
 ## FIDO2
 FIDO2 is the evolution of U2F and UAF. It’s the most recent standard and encompasses multiple specifications.
-* Web Authentication (WebAuthn) - the W3C specification for a browser API to enable FIDO authentication on supported browsers and platforms
-* CTAP1 (Client-to-Authenticator Protocol) - the renamed U2F allows the use of FIDO U2F devices as a second factor on FIDO2 browsers and operating systems
-* CTAP2 - the updated CTAP allows the use of authenticators for passwordless, second factor, and multi-factor
+* **Web Authentication (WebAuthn)** - the W3C specification for a browser API to enable FIDO authentication on supported browsers and platforms
+* **CTAP1 (Client-to-Authenticator Protocol)** - the renamed U2F allows the use of FIDO U2F devices as a second factor on FIDO2 browsers and operating systems
+* **CTAP2** - the updated CTAP allows the use of authenticators for passwordless, second factor, and multi-factor
 
 FIDO2 expands the capabilities and uses cases of earlier specifications to enable a true passwordless experience. 
