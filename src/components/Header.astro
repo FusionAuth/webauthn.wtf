@@ -2,24 +2,16 @@
 import ThemeSelector from "./ThemeSelector.astro";
 const nav = [
   {
-    "title": "Quickstarts",
-    "path": "/quickstarts/"
+    "title": "Basics",
+    "path": "/how-it-works/basics"
   },
   {
-    "title": "Docs",
-    "path": "/docs/"
+    "title": "Develop",
+    "path": "/develop/build-it-yourself"
   },
   {
-    "title": "Articles",
-    "path": "/articles/"
-  },
-  {
-    "title": "API Docs",
-    "path": "/docs/v1/apis/"
-  },
-  {
-    "title": "SDKs",
-    "path": "/docs/v1/sdks/"
+    "title": "Reference",
+    "path": "/reference/glossary"
   }
 ];
 const { breadcrumbs = [], displaySearchButton = false, themeable = true} = Astro.props;
@@ -42,8 +34,8 @@ const { breadcrumbs = [], displaySearchButton = false, themeable = true} = Astro
 
       <!-- Header nav -->
       <ul class="space-y-6 lg:flex lg:items-center lg:space-y-0">
-        {nav.map(nav =>
-          <li class:list={["font-semibold text-lg hover:text-indigo-600 dark:hover:text-indigo-400 lg:pl-8 lg:text-sm", Astro.url.pathname.startsWith(nav.path) ? "text-indigo-600 dark:text-indigo-400" : ""]}><a href={nav.path}>{nav.title}</a></li>
+        {nav.map(n =>
+          <li class:list={["font-semibold text-lg hover:text-indigo-600 dark:hover:text-indigo-400 lg:pl-8 lg:text-sm", Astro.url.pathname.startsWith(n.path) ? "text-indigo-600 dark:text-indigo-400" : ""]}><a href={n.path}>{n.title}</a></li>
         )}
       </ul>
 
@@ -57,7 +49,7 @@ const { breadcrumbs = [], displaySearchButton = false, themeable = true} = Astro
             </button>
         }
 
-        <a href="https://github.com/fusionauth/fusionauth-issues" class="flex items-center border border-slate-500 mt-5 rounded-lg p-2 text-slate-500 w-48 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border-0 lg:mt-0 lg:p-0 lg:text-slate-400 lg:w-auto lg:dark:hover:bg-transparent lg:hover:bg-transparent">
+        <a href="https://github.com/fusionauth/webauthn.wtf" class="flex items-center border border-slate-500 mt-5 rounded-lg p-2 text-slate-500 w-48 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border-0 lg:mt-0 lg:p-0 lg:text-slate-400 lg:w-auto lg:dark:hover:bg-transparent lg:hover:bg-transparent">
           <i class="fa-brands fa-github fa-fw text-lg"></i>
           <span class="ml-2 lg:hidden">GitHub</span>
         </a>

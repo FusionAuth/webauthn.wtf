@@ -1,0 +1,84 @@
+{
+  "WebAuthn": [
+    {
+      "path": "/",
+      "title": "What is WebAuthn?"
+    },
+    {
+      "path": "/history",
+      "title": "History of WebAuthn"
+    },
+    {
+      "path": "/fido-alliance",
+      "title": "FIDO Alliance"
+    }
+  ],
+  "How it works": [
+    {
+      "path": "/how-it-works/basics",
+      "title": "WebAuthn Basics"
+    },
+    {
+      "path": "/how-it-works/authenticators",
+      "title": "Authenticators"
+    },
+    {
+      "path": "/how-it-works/relying-party",
+      "title": "Relying Party"
+    },
+    {
+      "path": "/how-it-works/registration",
+      "title": "Registration Flow"
+    },
+    {
+      "path": "/how-it-works/authentication",
+      "title": "Authentication Flow"
+    },
+    {
+      "path": "/how-it-works/support",
+      "title": "Browser & Device Support"
+    }
+  ],
+  "Develop with WebAuthn": [
+    {
+      "path": "/develop/build-it-yourself",
+      "title": "Build it Yourself"
+    },
+    {
+      "path": "/develop/use-an-auth-provider",
+      "title": "Use an Auth Provider"
+    },
+    {
+      "path": "/develop/demo",
+      "title": "Demos"
+    },
+    {
+      "path": "/develop/debugger",
+      "title": "Debuggers"
+    }
+  ],
+  "Reference": [
+    {
+      "path": "/reference/glossary",
+      "title": "WebAuthn Glossary"
+    },
+    {
+      "path": "/reference/questions",
+      "title": "Common Questions"
+    },
+    {
+      "path": "/reference/resources",
+      "title": "Additional Resources"
+    }
+  ],
+  "About": [
+    {
+      "path": "/about/how-to-contribute",
+      "title": "How to contribute"
+    },
+    {
+      "path": "/about/privacy-attribution",
+      "title": "Privacy & Attributions"
+    }
+  ]
+}
