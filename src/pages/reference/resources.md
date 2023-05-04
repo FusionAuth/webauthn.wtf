@@ -2,7 +2,7 @@
 layout: ../../layouts/Layout.astro
 section: "Reference"
 title: "Resources"
-description: ""
+description: "Check out our curated list of WebAuthn resources that can simplify your authentication process, enhance your security, and improve your user experience."
 ---
 
 ## Awesome WebAuthn

@@ -2,7 +2,7 @@
 layout: ../layouts/Layout.astro
 section: "WebAuthn"
 title: "What is WebAuthn?"
-description: ""
+description: "WebAuthn (web authentication) is an API that enables passwordless authentication and improves web security. Learn about its features, benefits, and adoption across browsers and platforms."
 ---
 
 ## Overview

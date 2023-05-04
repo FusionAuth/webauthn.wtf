@@ -2,7 +2,7 @@
 layout: ../../layouts/Layout.astro
 section: "Reference"
 title: "Common Questions"
-description: ""
+description: "Get answers to your most pressing questions about WebAuthn, a web authentication standard that enables passwordless authentication. Discover the most common questions and concerns about WebAuthn, including what it is, how it works, and how it compares to traditional authentication methods."
 ---
 
 ## What is WebAuthn?

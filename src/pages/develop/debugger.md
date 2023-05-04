@@ -2,7 +2,7 @@
 layout: ../../layouts/Layout.astro
 section: "Develop"
 title: "Debuggers"
-description: ""
+description: "Debug WebAuthn registration and authentication requests with our list of online WebAuthn debugger tools. Test and troubleshoot your WebAuthn implementation by simulating different user scenarios and verifying the results."
 ---
 
 Demos are great to see examples of how an end user may interact with WebAuthn, but developers may be interested in the details of authenticator interaction. Check out these tools to help with your WebAuthn implementation.

@@ -2,7 +2,7 @@
 layout: ../../layouts/Layout.astro
 section: "Develop"
 title: "Demos"
-description: ""
+description: "Explore the power of WebAuthn with our list of demos and examples. Our curated list of WebAuthn demos showcases the latest capabilities and features, with easy-to-follow instructions and code samples."
 ---
 
 There are a number of sites that allow you see WebAuthn in action. Check out one of these demos to test drive yourself!

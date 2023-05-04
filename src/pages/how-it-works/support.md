@@ -2,7 +2,7 @@
 layout: ../../layouts/Layout.astro
 section: "How it Works"
 title: "Browser & Device Support"
-description: ""
+description: "Learn which web browsers and devices currently support WebAuthn. As WebAuthn continues to gain momentum as a standard for secure and user-friendly passwordless authentication, you can expect its support to expand even further across various devices, operating systems, and browsers."
 ---
 
 As WebAuthn continues to gain momentum as a standard for secure and user-friendly passwordless authentication, you can expect its support to expand even further across various devices, operating systems, and browsers.

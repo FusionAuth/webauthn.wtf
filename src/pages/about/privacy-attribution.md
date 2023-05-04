@@ -2,7 +2,7 @@
 layout: ../../layouts/Layout.astro
 section: "About"
 title: "Privacy Policy & Attributions"
-description: ""
+description: "At WebAuthn.wtf, we take your privacy seriously. We do not use cookies and we do not collect any personal data. "
 ---
 
 ## Privacy Policy

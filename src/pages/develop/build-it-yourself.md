@@ -2,7 +2,7 @@
 layout: ../../layouts/Layout.astro
 section: "Develop"
 title: "Build it Yourself"
-description: ""
+description: "Learn how to integrate WebAuthn into your web application and provide passwordless authentication for your users. Discover the different steps involved in implementing WebAuthn, including generating and verifying credentials, handling user consent, and integrating with your existing authentication system."
 ---
 
 In order to build your own WebAuthn implementation, you will need to implement the code to act as a WebAuthn Relying Party. Most often the Relying Party code will be split between:

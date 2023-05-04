@@ -2,7 +2,7 @@
 layout: ../../layouts/Layout.astro
 section: "Reference"
 title: "Glossary"
-description: ""
+description: "Explore our comprehensive glossary of WebAuthn terms, and learn about the key concepts and technical jargon involved. Discover definitions of WebAuthn terms, including CTAP, U2F, attestation, assertion, authenticator, and more."
 ---
 
 In this glossary, we define and explain common terms and acronyms to help you get a better understanding of the WebAuthn ecosystem.

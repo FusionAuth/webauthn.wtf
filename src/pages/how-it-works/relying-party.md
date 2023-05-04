@@ -2,7 +2,7 @@
 layout: ../../layouts/Layout.astro
 section: "How it Works"
 title: "Relying Party"
-description: ""
+description: "The Relying Party (RP) is the entity whose web application is using WebAuthn to register and authenticate users. Discover how relying parties interact with WebAuthn, how they verify the user's identity, and how they protect user privacy and security."
 ---
 
 The Relying Party (RP) is the entity whose web application is using WebAuthn to register and authenticate users. The RP controls WebAuthn API options during registration and authentication ceremonies. They can use these options to enhance security, increase trust in the authenticator, and improve the user experience. The Relying Party must also validate WebAuthn API responses from the authenticator and make a trust decision before registering a passkey.
