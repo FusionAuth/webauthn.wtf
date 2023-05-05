@@ -16,3 +16,14 @@ We are currently using Astro for our SSG technology. To run the project, just ty
 npm install
 npm run start
 ```
+
+## Running in a prod like environment
+
+Some features don't work in dev mode. This includes pagefind search.
+
+In order to test changes to such components, run in `preview` mode:
+
+```
+npm run build
+npm run preview
+```
