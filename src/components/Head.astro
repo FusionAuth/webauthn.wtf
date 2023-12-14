@@ -42,4 +42,12 @@ const { description, section, title } = Astro.props;
   </script>
   <noscript><p><img src="https://analytics.fusionauth.io/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p></noscript>
   <!-- End Matomo Code -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-71X2JV8FPV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-71X2JV8FPV');
+  </script>
 </head>
