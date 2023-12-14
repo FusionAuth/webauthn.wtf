@@ -2,6 +2,14 @@
 const { description, section, title } = Astro.props;
 ---
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-71X2JV8FPV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-71X2JV8FPV');
+  </script>
   <meta charSet="UTF-8"/>
   <meta name="viewport" content="width=device-width"/>
   <!-- TODO: Implement favicons by following this blog post https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7 -->
