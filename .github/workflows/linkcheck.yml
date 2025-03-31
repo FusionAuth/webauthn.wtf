@@ -17,7 +17,7 @@ jobs:
     steps:
       # linkcheck
       - uses: actions/checkout@v3
-      - uses: filiph/linkcheck@2.0.23
+      - uses: fusionauth/fusionauth-actions/linkcheck@v3
         with:
           arguments: https://webauthn.wtf/ --skip-file .github/linkcheck-skip.txt
         name: linkcheck
